@@ -28,7 +28,7 @@ const VideoDetail = () => {
   } = videoDetail;
 
   return (
-    <div className="w-full flex flex-col items-center mt-2">
+    <div className="mt-2">
       <ReactPlayer
         url={`https://www.youtube.com/watch?v=${id}`}
         controls
