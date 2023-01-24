@@ -28,8 +28,12 @@ const VideoDetail = () => {
   } = videoDetail;
 
   return (
-    <div className="mt-2">
+    <div
+      style={{ width: "100%", position: "sticky", top: "86px" }}
+      className="mt-2"
+    >
       <ReactPlayer
+        className="react-player"
         url={`https://www.youtube.com/watch?v=${id}`}
         controls
         playing={true}
