@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Videos from "./Videos";
+import VideosGrid from "./VideosGrid";
 import ChannelCard from "./ChannelCard";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
@@ -28,13 +28,8 @@ const ChannelDetail = () => {
 
   return (
     <>
-      <div>
-        <ChannelCard channelDetail={channelDetail} marginTop="-93px" />
-      </div>
-      <div p={2} display="flex">
-        <div sx={{ mr: { sm: "100px" } }} />
-        <Videos videos={videos} />
-      </div>
+      <ChannelCard channelDetail={channelDetail} marginTop="-93px" />
+      <VideosGrid videos={videos} />
     </>
   );
 };

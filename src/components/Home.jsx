@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Videos from "./Videos";
+import VideosGrid from "./VideosGrid";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 export default function Home() {
@@ -12,5 +12,5 @@ export default function Home() {
       setVideos(data.items)
     );
   }, [selectedCategory]);
-  return <Videos videos={videos} />;
+  return <VideosGrid videos={videos} />;
 }

@@ -9,13 +9,12 @@ import {
   demoChannelTitle,
 } from "../utils/constants";
 
-const VideoCard = ({
+const VideoItem = ({
   video: {
     id: { videoId },
     snippet,
   },
 }) => {
-  console.log(snippet);
   return (
     <>
       <Link to={videoId ? `/video/${videoId}` : `/video/cV2gBU6hKfY`}>
@@ -40,4 +39,4 @@ const VideoCard = ({
   );
 };
 
-export default VideoCard;
+export default VideoItem;

@@ -7,6 +7,7 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
   const [videos, setVideos] = useState(null);
+  const [speed, setSpeed] = useState(1.75);
   const { id } = useParams();
 
   useEffect(() => {
@@ -22,18 +23,20 @@ const VideoDetail = () => {
   if (!videoDetail?.snippet) return <Loader />;
 
   const {
-    snippet: { title, channelId, channelTitle },
+    snippet: { title },
     statistics: { viewCount, likeCount },
   } = videoDetail;
 
   return (
-    <div>
+    <div className="w-full mt-2">
       <ReactPlayer
         url={`https://www.youtube.com/watch?v=${id}`}
-        className="react-player"
+        width={"auto"}
         controls
+        playing={true}
+        playbackRate={1.75}
       />
-      <p>{title}</p>
+      <p className="text-sm mt-2">{title}</p>
     </div>
   );
 };

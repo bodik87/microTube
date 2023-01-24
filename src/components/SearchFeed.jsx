@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
 import { fetchFromAPI } from "../utils/fetchFromAPI";
-import Videos from "./Videos";
+import VideosGrid from "./VideosGrid";
 
 const SearchFeed = () => {
   const [videos, setVideos] = useState(null);
@@ -22,7 +21,7 @@ const SearchFeed = () => {
       </p>
       <div className="flex">
         <div style={{ mr: { sm: "100px" } }} />
-        {<Videos videos={videos} />}
+        {<VideosGrid videos={videos} />}
       </div>
     </div>
   );
