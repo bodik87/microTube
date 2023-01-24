@@ -1,12 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { demoProfilePicture } from "../utils/constants";
 
 const ChannelCard = ({ channelDetail }) => (
-  <Link
-    className="flex gap-2 items-center"
-    to={`/channel/${channelDetail?.id?.channelId}`}
-  >
+  <div className="flex gap-2 items-center py-2">
     <img
       className="rounded-full h-12 w-12"
       src={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture}
@@ -21,7 +17,7 @@ const ChannelCard = ({ channelDetail }) => (
         Subscribers
       </p>
     )}
-  </Link>
+  </div>
 );
 
 export default ChannelCard;

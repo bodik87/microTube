@@ -15,10 +15,7 @@ const SearchFeed = () => {
 
   return (
     <div>
-      <p>
-        Результати пошуку за запитом
-        <span style={{ color: "#FC1503" }}> {searchTerm}</span>
-      </p>
+      <p className="text-[#FC1503]">{searchTerm}</p>
       <div className="flex">
         <div style={{ mr: { sm: "100px" } }} />
         {<VideosGrid videos={videos} />}

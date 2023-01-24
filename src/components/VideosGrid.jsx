@@ -1,9 +1,10 @@
 import React from "react";
 import VideoItem from "./VideoItem";
 import ChannelCard from "./ChannelCard";
+import Loader from "./Loader";
 
 const VideosGrid = ({ videos }) => {
-  if (!videos?.length) return <p>Loading...</p>;
+  if (!videos?.length) return <Loader />;
 
   return (
     <div className="mt-2 grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-2">

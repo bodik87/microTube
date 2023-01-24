@@ -17,17 +17,20 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={onhandleSubmit} className="flex items-center gap-4 py-1">
+    <form
+      onSubmit={onhandleSubmit}
+      className="flex justify-center items-center gap-4 py-1"
+    >
       <Link
-        className="flex gap-2 items-center font-semibold text-[#FF0000]"
+        className="flex items-center font-medium text-[#FF0000] text-xl"
         to="/"
       >
-        microTube
+        micro<span className="text-white">Tube</span>
       </Link>
 
       <div className="relative">
         <input
-          className="bg-transparent outline outline-[2px] outline-gray-400 text-white text-sm pl-4 pr-10 py-1 rounded-lg transition-all placeholder:text-xs placeholder:text-gray-400 focus:outline focus:outline-[#FF0000]"
+          className="bg-white/10 outline outline-[2px] outline-gray-400 text-white text-sm pl-4 pr-10 py-1 rounded-lg transition-all placeholder:text-xs placeholder:text-gray-400 focus:outline focus:outline-[#FF0000] focus:bg-transparent"
           placeholder="Search..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
